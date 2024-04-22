@@ -4,5 +4,5 @@
 ## 套件使用:
 [RainyDay.js](https://mubaidr.js.org/rainyday.js/)
 ## 預覽頁面:
-GitHub Pages: [Rainying_login](https://lockon1248.github.io/raining_login/)
+GitHub Pages: [Rainying_login](https://lockon1248.github.io/raining_login/) <br>
 codepen: [Rainying_login](https://lockon1248.github.io/raining_login/)
