@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/rainyday.js/0.1.2/rainyday.min.js"
+			integrity="sha512-v2oDPGV51sLE0ZxzZXVaJWHJiXNrp2p2q9IPKcTnRQ0HDTNI2Ll9HkGORLXZ9uA/Ly9Os4hx89nCc8zjiFhWaQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+		<title>Document</title>
+	</head>
+	<body>
+		<form action="" class="card">
+			<h1 class="title">login</h1>
+			<div class="input-group">
+				<input type="text" class="form-control" id="email" placeholder="Email" />
+				<label for="email" class="label">Email</label>
+				<div class="input-group" id="password">
+					<input type="password" class="form-control" placeholder="password" />
+					<label for="password" class="label">password</label>
+				</div>
+			</div>
+			<div class="d-flex justify-content-between">
+				<div class="form-check">
+					<input type="checkbox" id="remember" class="form-check-input" />
+					<label for="remember" class="form-check-label">Remember me</label>
+				</div>
+				<a href="#">Forget password</a>
+			</div>
+			<button type="submit" class="btn margin-top">Login</button>
+		</form>
+
+		<img class="img" src="./img/pexels-bob-clark-21492.jpg" alt="" />
+	</body>
+	<style>
+		:root {
+			--primary-light: #62c7e3;
+			--primary: #4eafc9;
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			line-height: 1.2;
+			font-weight: 300;
+		}
+		a {
+			text-decoration: none;
+			color: var(--primary);
+		}
+		a:hover,
+		a:focus {
+			text-decoration: underline;
+			color: var(--primary-light);
+		}
+		.img {
+			width: 100vw;
+			height: 100vh;
+			position: fixed;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			background-position: 50% 50%;
+			object-fit: cover;
+			object-position: 50% 50%;
+		}
+		.card {
+			position: relative;
+			background-color: rgba(255, 255, 255, 0.1);
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			width: 400px;
+			border-radius: 0.75rem;
+			z-index: 1;
+			backdrop-filter: blur(5px);
+			padding: 2rem;
+			color: #ffff;
+		}
+		.title {
+			font-size: 1.75rem;
+			font-weight: 500;
+			text-align: center;
+			line-height: 1.2;
+			margin-bottom: 1.25rem;
+		}
+
+		.input-group {
+			margin-bottom: 1.5rem;
+			position: relative;
+		}
+		.form-control {
+			width: 100%;
+			border: 0;
+			border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+			background-color: transparent;
+			line-height: 1.25;
+			padding: 1rem 0;
+			color: #ffff;
+			height: 48px;
+			outline: none;
+			appearance: none;
+		}
+		.form-control::placeholder {
+			color: transparent;
+		}
+		.label {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 2;
+			padding: 1rem 0;
+			white-space: nowrap;
+			pointer-events: none;
+			transform-origin: 0 0;
+			transition: transform 0.1s ease-in-out;
+		}
+		.form-control:focus ~ label,
+		.form-control:not(:placeholder-shown) ~ .label {
+			color: rgba(255, 255, 255, 0.6);
+			transform: scale(0.85) translateY(-0.8rem);
+		}
+		.form-control:not(:placeholder-shown),
+		.form-control:focus {
+			padding-top: 1.625rem;
+			margin-bottom: 2rem;
+		}
+
+		.form-check-input {
+			appearance: none;
+			cursor: pointer;
+			outline: none;
+			width: 1rem;
+			height: 1rem;
+			line-height: 1.5;
+			border-radius: 0.25rem;
+			margin: 0;
+			margin-top: 0.25rem;
+			background-color: rgba(255, 255, 255, 0.1);
+			border: 1px solid rgba(255, 255, 255, 0.1);
+		}
+		.form-check-input:checked {
+			background-image: url('./img/check.svg');
+			background-position: center center;
+			background-color: var(--primary);
+		}
+		.btn {
+			width: 100%;
+			height: 48px;
+			background-color: rgba(255, 255, 255, 0.2);
+			border: 1px solid rgba(255, 255, 255, 0.6);
+			border-radius: 0.25rem;
+			color: #ffff;
+			cursor: pointer;
+			font-size: 1.5rem;
+			transition: all 0.2s;
+		}
+		.btn:hover,
+		.btn:focus,
+		.btn:active,
+		.btn.active {
+			background-color: var(--primary);
+			border-color: var(--primary);
+		}
+
+		/* utilities */
+
+		.d-flex {
+			display: flex;
+		}
+		.justify-content-center {
+			justify-content: center;
+		}
+		.justify-content-between {
+			justify-content: space-between;
+		}
+		.margin-top {
+			margin-top: 1.5rem;
+		}
+	</style>
+	<script>
+		const image = document.querySelector('.img');
+		image.onload = function () {
+			const rainEffect = new RainyDay({
+				image: this,
+				gravityAngle: Math.PI / 3,
+				fps: 30
+			});
+			rainEffect.rain([[10, 8, 0.05], [7, 4, 0.5],[(2, 1, 20)]], 80);
+		};
+		image.crossOrigin = 'anonymous';
+	</script>
+</html>
